@@ -1,5 +1,6 @@
 from astropy.modeling.models import Sersic2D
 from astropy.modeling.parameters import Parameter
+import numpy as np
 
 
 class Sersic2DAsym(Sersic2D):
