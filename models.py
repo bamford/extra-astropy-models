@@ -47,7 +47,7 @@ class Sersic2DAsym(Sersic2D):
         angle = np.arctan(x_maj/(x_min + eps))
         angle += np.pi * (x_min < 0) - np.pi/2
         angle[np.isnan(angle)] = 0
-        asym = (1 - asym_strength * np.cos(theta - asym_angle - angle))
+        asym = (1 - asym_strength * np.cos(asym_angle - angle))
         return amplitude * asym * np.exp(-bn * (z ** (1 / n) - 1))
 
 
